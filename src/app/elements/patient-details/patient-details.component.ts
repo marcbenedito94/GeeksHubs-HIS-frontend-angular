@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { ApiService } from 'src/app/services/api.service';
+
+import { User } from './../../models/user.interface';
+
 
 @Component({
   selector: 'app-patient-details',
@@ -7,7 +13,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientDetailsComponent implements OnInit {
 
-  constructor() { }
+  patient: User;
+
+  constructor(private route: ActivatedRoute, private apiService: ApiService) {
+    const userId = this.route.snapshot.paramMap.get('id');
+    this.patient=this.apiService.getPatientDetail(userId);
+  }
 
   ngOnInit() {
   }

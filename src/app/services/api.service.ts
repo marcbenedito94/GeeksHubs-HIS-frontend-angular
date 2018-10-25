@@ -34,4 +34,8 @@ export class ApiService {
     getPatients() {
         return this.users.filter( user => user.role === 'patient');
     }
+
+    getPatientDetail(uid) {
+        return this.users.find( user => user.uid === uid );
+      }
 }
