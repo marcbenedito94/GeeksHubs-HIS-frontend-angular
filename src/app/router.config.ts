@@ -9,8 +9,14 @@ import { PatientDetailsComponent } from './elements/patient-details/patient-deta
 import { HistoryDetailsComponent } from './elements/history-details/history-details.component';
 import { HistoriesListComponent } from './elements/histories-list/histories-list.component';
 import { UsersListComponent } from './elements/users-list/users-list.component';
+import { CreateUserComponent } from './elements/create-user/create-user.component';
 
 export const routes: Routes = [
+    {   
+        path:'create-user',
+        component: CreateUserComponent,
+        canActivate:[AuthGuard]
+    },
     {
         path: 'history-details/:id',
         component: HistoryDetailsComponent,

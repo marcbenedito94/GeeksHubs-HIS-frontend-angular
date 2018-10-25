@@ -13,7 +13,7 @@ export class PatientsListComponent implements OnInit {
 
   //patients: Array <User> ;
 
-  constructor(private apiService: ApiService, private location: Location) {
+  constructor() {
     //this.patients = this.apiService.getPatients();
   }
 
