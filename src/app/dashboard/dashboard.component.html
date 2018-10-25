@@ -32,9 +32,16 @@
         </a>
     </div>
     <div class="option">
-        <a [routerLink]="['/histories-details/', userObject.uid]">
+        <a [routerLink]="['/my-histories-details/', userObject.uid]">
             <label *ngIf="userObject.role==='patient'">
-                Histories Details
+                My Histories Details
+            </label>
+        </a>
+    </div>
+    <div class="option">
+        <a [routerLink]="['/newuser']">
+            <label *ngIf="userObject.role==='technical' || userObject.role==='admin'">
+                Create User
             </label>
         </a>
     </div>

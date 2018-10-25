@@ -17,6 +17,7 @@ import { PatientsListComponent } from './elements/patients-list/patients-list.co
 import { HistoriesListComponent } from './elements/histories-list/histories-list.component';
 import { UsersListComponent } from './elements/users-list/users-list.component';
 import { PatientDetailsComponent } from './elements/patient-details/patient-details.component';
+import { MyHistoriesDetailsComponent } from './elements/my-histories-details/my-histories-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PatientDetailsComponent } from './elements/patient-details/patient-deta
     PatientsListComponent,
     HistoriesListComponent,
     UsersListComponent,
-    PatientDetailsComponent
+    PatientDetailsComponent,
+    MyHistoriesDetailsComponent
   ],
   imports: [
     BrowserModule,

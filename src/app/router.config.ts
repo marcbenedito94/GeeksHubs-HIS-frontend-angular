@@ -6,10 +6,16 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PatientsListComponent } from './elements/patients-list/patients-list.component';
 import { PatientDetailsComponent } from './elements/patient-details/patient-details.component';
+import { MyHistoriesDetailsComponent } from './elements/my-histories-details/my-histories-details.component';
 import { HistoriesListComponent } from './elements/histories-list/histories-list.component';
 import { UsersListComponent } from './elements/users-list/users-list.component';
 
 export const routes: Routes = [
+    {
+        path: 'my-histories-details',
+        component: MyHistoriesDetailsComponent,
+        canActivate: [AuthGuard],
+    },
     {
         path: 'patient-details',
         component: PatientDetailsComponent,
