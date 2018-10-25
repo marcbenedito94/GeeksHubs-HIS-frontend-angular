@@ -17,7 +17,8 @@ export class ApiService {
     ];
 
     histories: Array<History> = [
-        { userId: "0001", doctorId: "001", log: ["Dolor de cabeza", "Virus estomacal"]}
+        { userId: "0001", doctorId: "001", log: ["Dolor de cabeza", "Virus estomacal"]},
+        { userId: "0002", doctorId: "001", log: ["Dolor de garganta", "3 dedos rotos"]}
     ];
 
     constructor( private stateManager: StateManagerService ) {}
@@ -37,5 +38,13 @@ export class ApiService {
 
     getPatientDetail(uid) {
         return this.users.find( user => user.uid === uid );
-      }
+    }
+
+    getHistoriesList() {
+        return this.histories;
+    }
+
+    getPatientsList() {
+        return this.users.filter( user => user.role === 'patient');
+    }
 }
