@@ -1,0 +1,41 @@
+<button (click)="logout()">logout</button>
+
+<br/><br/>
+
+<div class="dashboards">
+    <div class="option">
+        <a [routerLink]="['/patients-list']">
+            <label *ngIf="userObject.role === 'doctor' || userObject.role ==='admin'">
+                Patients List
+            </label>
+        </a>
+    </div>
+    <div class="option">
+        <a [routerLink]="['/histories-list']">
+            <label *ngIf="userObject.role === 'doctor' || userObject.role === 'admin'">
+                Histories List
+            </label>
+        </a>
+    </div>
+    <div class="option">
+        <a [routerLink]="['/users-list']">
+            <label *ngIf="userObject.role === 'admin'">
+                All Users
+            </label>
+        </a>
+    </div>
+    <div class="option">
+        <a [routerLink]="['/patient-details/', userObject.uid]">
+            <label *ngIf="userObject.role === 'patient'">
+                Details of Me
+            </label>
+        </a>
+    </div>
+    <div class="option">
+        <a [routerLink]="['/histories-details/', userObject.uid]">
+            <label *ngIf="userObject.role==='patient'">
+                Histories Details
+            </label>
+        </a>
+    </div>
+</div>
