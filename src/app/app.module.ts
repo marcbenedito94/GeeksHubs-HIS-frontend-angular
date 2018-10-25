@@ -19,6 +19,7 @@ import { UsersListComponent } from './elements/users-list/users-list.component';
 import { PatientDetailsComponent } from './elements/patient-details/patient-details.component';
 import { HistoryDetailsComponent } from './elements/history-details/history-details.component';
 import { CreateUserComponent } from './elements/create-user/create-user.component';
+import { UserDetailsComponent } from './elements/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CreateUserComponent } from './elements/create-user/create-user.componen
     UsersListComponent,
     PatientDetailsComponent,
     HistoryDetailsComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

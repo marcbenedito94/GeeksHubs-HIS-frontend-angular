@@ -3,7 +3,7 @@
 <br>
 
 <div class="patientsList">
-  <div *ngFor="let patient of patients">
+  <div *ngFor="let patient of patientsList">
       <a [routerLink]="['/patient-details', patient.uid]">
         <div class="patientDetail">{{patient.name}} {{patient.surname}}</div>
       </a>

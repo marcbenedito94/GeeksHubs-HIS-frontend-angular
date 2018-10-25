@@ -32,10 +32,6 @@ export class ApiService {
         return userObject;
     }
 
-    getPatients() {
-        return this.users.filter( user => user.role === 'patient');
-    }
-
     getPatientDetail(uid) {
         return this.users.find( user => user.uid === uid );
     }
@@ -44,7 +40,19 @@ export class ApiService {
         return this.histories;
     }
 
+    getHistoryDetail(uid){
+        return this.histories.find( histories => histories.userId === uid );
+    }
+
     getPatientsList() {
         return this.users.filter( user => user.role === 'patient');
+    }
+
+    getUserDetails(id){
+        return this.users.find( user => user.uid === id );
+    }
+
+    getUsersList() {
+        return this.users;
     }
 }

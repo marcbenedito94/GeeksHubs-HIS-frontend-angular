@@ -10,6 +10,7 @@ import { HistoryDetailsComponent } from './elements/history-details/history-deta
 import { HistoriesListComponent } from './elements/histories-list/histories-list.component';
 import { UsersListComponent } from './elements/users-list/users-list.component';
 import { CreateUserComponent } from './elements/create-user/create-user.component';
+import { UserDetailsComponent } from './elements/user-details/user-details.component';
 
 export const routes: Routes = [
     {   
@@ -30,6 +31,11 @@ export const routes: Routes = [
     {
         path: 'users-list',
         component: UsersListComponent,
+        canActivate: [AuthGuard],
+    },
+    {
+        path: 'user-details/:id',
+        component: UserDetailsComponent,
         canActivate: [AuthGuard],
     },
     {

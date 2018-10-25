@@ -1,3 +1,7 @@
-<p>
-  histories-details works!
-</p>
+<h1>Histories of {{user.name}} {{user.surname}}</h1>
+<div class="historyContainer"> 
+  <p> Doctor: {{doctor.name}} {{doctor.surname}}</p>
+  <div class="historyLog" *ngFor = "let log of history.log">
+    <p>{{ log }}</p>
+  </div>
+</div>
