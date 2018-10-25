@@ -24,10 +24,14 @@ export class ApiService {
     login( user, pass ) {
         // logic
         const userObject = this.users.find( item => item.username === user && item.password === pass )
-        
+
         if ( userObject ) {
             this.stateManager.login( userObject )
         } 
         return userObject;
+    }
+
+    getPatients() {
+        return this.users.filter( user => user.role === 'patient');
     }
 }

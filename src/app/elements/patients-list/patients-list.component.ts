@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ApiService } from './../../services/api.service';
+
+import { User } from './../../models/user.interface';
+
 @Component({
   selector: 'app-patients-list',
   templateUrl: './patients-list.component.html',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientsListComponent implements OnInit {
 
-  constructor() { }
+  //patients: Array <User> ;
+
+  constructor(private apiService: ApiService, private location: Location) {
+    //this.patients = this.apiService.getPatients();
+  }
 
   ngOnInit() {
   }
