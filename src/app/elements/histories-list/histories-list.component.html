@@ -1,11 +1,15 @@
-<h1>Histories</h1>
+<div class="titles">
+  <h1 class="title">Histories</h1>
+</div>
 
-  <div class="historiesList">
+  <div class="maincontainer">
     <div *ngFor="let history of historiesList">
       <div *ngFor="let patient of patientsList">
         <div class="historyDetail" *ngIf="history.userId === patient.uid">
           <a [routerLink]="['/history-details', history.userId]">{{ patient.name }} {{ patient.surname }}</a>
         </div>
       </div>
+
+      <br/><br/>
     </div>
   </div>

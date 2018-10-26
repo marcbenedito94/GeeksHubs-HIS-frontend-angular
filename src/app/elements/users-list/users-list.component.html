@@ -1,4 +1,11 @@
-<p>List of Users:</p>
-<div *ngFor="let user of usersList">
-  <a [routerLink]="['/user-details', user.uid]">{{user.name}} {{user.surname}}</a>
+<div class="titles">
+  <h1 class="title">List of Users:</h1>
+</div>
+
+<div class="maincontainer">
+  <div *ngFor="let user of usersList">
+    <a [routerLink]="['/user-details', user.uid]">{{user.name}} {{user.surname}}</a>
+
+    <br/><br/>
+  </div>
 </div>

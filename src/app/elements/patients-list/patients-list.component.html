@@ -1,11 +1,15 @@
-<h1>Patients List</h1>
+<div class="titles">
+  <h1 class="title">Patients List</h1>
+</div>
 
-<br>
+<br/>
 
-<div class="patientsList">
+<div class="maincontainer">
   <div *ngFor="let patient of patientsList">
       <a [routerLink]="['/patient-details', patient.uid]">
         <div class="patientDetail">{{patient.name}} {{patient.surname}}</div>
       </a>
+
+      <br/><br/>
   </div>
 </div>

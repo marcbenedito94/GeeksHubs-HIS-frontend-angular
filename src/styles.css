@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.titles {
+    text-align: center;
+    margin: 0 30%;
+    background-color: red;
+}
+
+.title {
+    padding: 0.5em 0em;
+}
+
+.maincontainer {
+    text-align: center;
+    margin: 0 30%;
+    background-color: aquamarine;
+}
+
+.btnLogout {
+    margin-top: 1em;
+}
+
+.inputs {
+    padding: 1em 1em;
+}

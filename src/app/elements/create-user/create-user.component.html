@@ -1,5 +1,7 @@
-<h1>Create User:</h1>
-<div class="registerForm">
+<div class="titles">
+  <h1 class="title">Create User:</h1>
+</div>
+<div class="maincontainer">
   <form>
     <div class="enterData">Type of User: <select name="newRole" [(ngModel)]="newRole"><br/>
         <option value='patient'>Patient</option>
@@ -7,15 +9,35 @@
         <option value='technical'>Admin</option>
       </select>
     </div>
+
+    <br/><br/>
+    
     <div class="enterData">ID: <input class="registerInput" placeholder="ID of User" name="newUserId" [(ngModel)]="newId"></div>
+
+    <br/><br/>
+
     <div class="enterData">Name: <input class="registerInput" placeholder="Name of User" name="newUserName" [(ngModel)]="newName"></div>
+    
+    <br/><br/>
+    
     <div class="enterData">Surname: <input class="registerInput" placeholder="Surname of User" name="newUserSurname" [(ngModel)]="newSurname"></div>
+    
+    <br/><br/>
+    
     <div class="enterData">DNI: <input class="registerInput" placeholder="DNI" name="newUserDNI" [(ngModel)]="newDNI"></div>
+    
+    <br/><br/>
+    
     <div class="enterData">UserName: <input class="registerInput" placeholder="UserName" name="newUserLogin"
         [(ngModel)]="newLogin"></div>
+    
+    <br/><br/>
+    
     <div class="enterData">Password: <input class="registerInput" type="password" placeholder="Password" name="newUserPass"
         [(ngModel)]="newPass"></div>
   </form>
+
+  <br/><br/>
 
   <button type="button" class="register" (click)="createUser(newRole,newId,newName,newSurname,newDNI,newLogin,newPass)">Submit</button>
 </div>

@@ -1,5 +1,8 @@
-<h1>Histories of {{user.name}} {{user.surname}}</h1>
-<div class="historyContainer"> 
+<div class="titles">
+  <h1 class="title">Histories of {{user.name}} {{user.surname}}</h1>
+</div>
+
+<div class="maincontainer"> 
   <p> Doctor: {{doctor.name}} {{doctor.surname}}</p>
   <div class="historyLog" *ngFor = "let log of history.log">
     <p>{{ log }}</p>

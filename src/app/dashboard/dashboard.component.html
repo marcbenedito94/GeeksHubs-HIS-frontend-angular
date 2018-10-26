@@ -1,8 +1,14 @@
-<button (click)="logout()">logout</button>
+<div class="titles">
+    <h1 class="title">Dashboard</h1>
+</div>
 
 <br/><br/>
 
-<div class="dashboards">
+<div class="maincontainer">
+    <button class="btnLogout" (click)="logout()">logout</button>
+
+    <br/><br/>
+
     <div class="option">
         <a [routerLink]="['/patients-list']">
             <label *ngIf="userObject.role === 'doctor' || userObject.role ==='admin'">
@@ -10,6 +16,9 @@
             </label>
         </a>
     </div>
+
+    <br/><br/>
+
     <div class="option">
         <a [routerLink]="['/histories-list']">
             <label *ngIf="userObject.role === 'doctor' || userObject.role === 'admin'">
@@ -17,6 +26,9 @@
             </label>
         </a>
     </div>
+
+    <br/><br/>
+
     <div class="option">
         <a [routerLink]="['/users-list']">
             <label *ngIf="userObject.role === 'admin'">
@@ -24,6 +36,19 @@
             </label>
         </a>
     </div>
+
+    <br/><br/>
+
+    <div class="option">
+        <a [routerLink]="['/create-user']">
+            <label *ngIf="userObject.role==='technical' || userObject.role==='admin'">
+                Create User
+            </label>
+        </a>
+    </div>
+
+    <br/><br/>
+
     <div class="option">
         <a [routerLink]="['/patient-details/', userObject.uid]">
             <label *ngIf="userObject.role === 'patient'">
@@ -31,17 +56,13 @@
             </label>
         </a>
     </div>
+
+    <br/><br/>
+
     <div class="option">
         <a [routerLink]="['/my-histories-details/', userObject.uid]">
             <label *ngIf="userObject.role==='patient'">
                 My Histories Details
-            </label>
-        </a>
-    </div>
-    <div class="option">
-        <a [routerLink]="['/create-user']">
-            <label *ngIf="userObject.role==='technical' || userObject.role==='admin'">
-                Create User
             </label>
         </a>
     </div>
