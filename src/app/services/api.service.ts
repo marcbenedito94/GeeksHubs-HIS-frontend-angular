@@ -55,4 +55,9 @@ export class ApiService {
     getUsersList() {
         return this.users;
     }
+
+    addUser(newuser:User){
+        this.users.push(newuser);
+        alert("New User Created");
+    }
 }
