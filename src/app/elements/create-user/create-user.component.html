@@ -1,3 +1,21 @@
-<p>
-  create-user works!
-</p>
+<h1>Create User:</h1>
+<div class="registerForm">
+  <form>
+    <div class="enterData">Type of User: <select name="newRole" [(ngModel)]="newRole"><br/>
+        <option value='patient'>Patient</option>
+        <option value='doctor'>Doctor</option>
+        <option value='technical'>Admin</option>
+      </select>
+    </div>
+    <div class="enterData">ID: <input class="registerInput" placeholder="ID of User" name="newUserId" [(ngModel)]="newId"></div>
+    <div class="enterData">Name: <input class="registerInput" placeholder="Name of User" name="newUserName" [(ngModel)]="newName"></div>
+    <div class="enterData">Surname: <input class="registerInput" placeholder="Surname of User" name="newUserSurname" [(ngModel)]="newSurname"></div>
+    <div class="enterData">DNI: <input class="registerInput" placeholder="DNI" name="newUserDNI" [(ngModel)]="newDNI"></div>
+    <div class="enterData">UserName: <input class="registerInput" placeholder="UserName" name="newUserLogin"
+        [(ngModel)]="newLogin"></div>
+    <div class="enterData">Password: <input class="registerInput" type="password" placeholder="Password" name="newUserPass"
+        [(ngModel)]="newPass"></div>
+  </form>
+
+  <button type="button" class="register" (click)="registerUser(newRole,newId,newName,newSurname,newDNI,newLogin,newPass)">Submit</button>
+</div>
