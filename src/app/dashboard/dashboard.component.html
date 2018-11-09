@@ -11,7 +11,7 @@
 
     <div class="option">
         <a [routerLink]="['/patients-list']">
-            <label *ngIf="userObject.role === 'doctor' || userObject.role ==='admin'">
+            <label *ngIf="userObject.role === 'doctor' || userObject.role === 'admin'">
                 Patients List
             </label>
         </a>
@@ -41,7 +41,7 @@
 
     <div class="option">
         <a [routerLink]="['/create-user']">
-            <label *ngIf="userObject.role==='technical' || userObject.role==='admin'">
+            <label *ngIf="userObject.role === 'technical' || userObject.role === 'admin'">
                 Create User
             </label>
         </a>
@@ -61,7 +61,7 @@
 
     <div class="option">
         <a [routerLink]="['/my-histories-details/', userObject.uid]">
-            <label *ngIf="userObject.role==='patient'">
+            <label *ngIf="userObject.role === 'patient'">
                 My Histories Details
             </label>
         </a>

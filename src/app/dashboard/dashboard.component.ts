@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { StateManagerService } from '../services/state-manager.service';
-import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,8 +16,6 @@ export class DashboardComponent implements OnInit {
   
   ngOnInit() {
   }
-
-  //let roleUser = this.apiService.users.find(element  => element.username === username).role;
 
   logout(){
     this.stateManager.logout();
